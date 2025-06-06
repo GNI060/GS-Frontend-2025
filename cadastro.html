@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login / Cadastro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+      <nav class="flex items-center justify-between p-6 lg:px-8">
+        <div class="flex lg:flex-1">
+          <a href="/" class="-m-1.5 p-1.5">
+            <span class="sr-only">Global Solution</span>
+            <img src="/assets/GSlogo.png" alt="Logo" class="h-8 w-auto" />
+          </a>
+        </div>
+
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="#introdução" class="text-sm font-semibold text-gray-900">Introdução</a>
+          <a href="#impactos" class="text-sm font-semibold text-gray-900">Impactos</a>
+          <a href="#tecnologia" class="text-sm font-semibold text-gray-900">Tecnologia</a>
+          <a href="#solução" class="text-sm font-semibold text-gray-900">Solução</a>
+        </div>
+
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="/login" class="text-sm font-semibold text-gray-900">Log in →</a>
+        </div>
+      </nav>
+    </header>
+
+  <section id="login" class="flex items-center justify-center min-h-screen px-4 bg-gray-100">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+      <h2 id="form-title" class="text-2xl font-bold mb-6 text-center">Entrar</h2>
+
+      <form class="space-y-4">
+        <input
+          id="name-field"
+          type="text"
+          placeholder="Nome completo"
+          class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 hidden"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+        <input
+          type="password"
+          placeholder="Senha"
+          class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+        <button
+          type="submit"
+          id="submit-btn"
+          class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
+        >
+          Entrar
+        </button>
+      </form>
+
+      <p class="text-center mt-4 text-sm">
+        <span id="toggle-text">Não tem uma conta?</span>
+        <button
+          id="toggle-btn"
+          type="button"
+          class="text-blue-600 hover:underline"
+        >
+          Cadastre-se
+        </button>
+      </p>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <p>&copy; 2025 - Global Solution - Criado por Kauã Rodrigues, Felipe Santos e Gustavo Naoto Iida</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-btn');
+    const toggleText = document.getElementById('toggle-text');
+    const formTitle = document.getElementById('form-title');
+    const nameField = document.getElementById('name-field');
+    const submitBtn = document.getElementById('submit-btn');
+
+    let isLogin = true;
+
+    toggleBtn.addEventListener('click', () => {
+      isLogin = !isLogin;
+
+      if (isLogin) {
+        formTitle.textContent = 'Entrar';
+        nameField.classList.add('hidden');
+        submitBtn.textContent = 'Entrar';
+        toggleBtn.textContent = 'Cadastre-se';
+        toggleText.textContent = 'Não tem uma conta?';
+      } else {
+        formTitle.textContent = 'Cadastrar';
+        nameField.classList.remove('hidden');
+        submitBtn.textContent = 'Cadastrar';
+        toggleBtn.textContent = 'Entrar';
+        toggleText.textContent = 'Já tem uma conta?';
+      }
+    });
+  </script>
+</body>
+</html>
