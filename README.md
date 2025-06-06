@@ -20,9 +20,8 @@ A landing page apresenta:
 ## Como usar
 
 1. Clone o repositório.
-2. Instale as dependências com `npm install` ou `yarn`.
-3. Execute o projeto com `npm start` ou `yarn start`.
-4. Acesse a página no navegador em `http://localhost:3000`.
+3. Execute o projeto com com "Open with Live Server".
+4. Acesse a página no navegador.
 
 ## Integrantes do grupo
 
