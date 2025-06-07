@@ -20,7 +20,7 @@ A landing page apresenta:
 ## Como usar
 
 1. Clone o repositório.
-3. Execute o projeto com com "Open with Live Server".
+3. Execute o projeto com com "Open with Live Server". 
 4. Acesse a página no navegador.
 
 ## Integrantes do grupo
@@ -28,3 +28,4 @@ A landing page apresenta:
 - Felipe Santos Marceli RM560456
 - Kauã Rodrigues de Souza RM559335
 - Gustavo Naoto Iida RM560470
+
